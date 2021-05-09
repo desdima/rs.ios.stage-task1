@@ -11,7 +11,19 @@
 @implementation OddNumbers
 
 - (NSInteger)oddNumbers:(NSArray <NSNumber *> *)array {
-    return -1;
+    int i; //array counter
+    int l = 0; //odd numbers counter
+    NSInteger count; //count of array elements
+    count = [array count];
+    
+    for (i = 0; i < count; i++)
+    {
+        long prevPrime = [[array objectAtIndex: i] integerValue];
+        if (prevPrime % 2 == 1) {
+            l++;
+        }
+    }
+    return l;
 }
 
 @end
